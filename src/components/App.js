@@ -17,6 +17,9 @@ class App extends Component {
 		temp: '',
 		wind: '',
 		pressure: '',
+		temp_min: '',
+		temp_max: '',
+		humidity: '',
 		err: ''
 	}
 	handleInputChange = e => {
@@ -49,6 +52,9 @@ class App extends Component {
 					temp: data.main.temp,
 					wind: data.wind.speed,
 					pressure: data.main.pressure,
+					temp_min: data.main.temp_min,
+					temp_max: data.main.temp_max,
+					humidity: data.main.humidity,
 				}))
 			})
 			.catch(err => {

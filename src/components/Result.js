@@ -3,7 +3,7 @@ import './../styles/Result.css';
 
 
 const Result = props => {
-	const { err, city, temp, date, sunrise, sunset, wind, pressure } = props.weather;
+	const { err, city, temp, date, sunrise, sunset, wind, pressure, temp_min, temp_max, humidity } = props.weather;
 
 	let content = null;
 	if (!err && city) {
@@ -15,6 +15,9 @@ const Result = props => {
 				<h3>Wyniki wyszukiwania dla miasta <em>{city}</em></h3>
 				<h4>Dane aktualne dla dnia i godziny: {date}</h4>
 				<h4>Aktualna temperatura: {temp} &#176;C</h4>
+				<h4>Minimalna temperatura: {temp_min} &#176;C</h4>
+				<h4>Maksymalna temperatura: {temp_max} &#176;C</h4>
+				<h4>Wilgotność: {humidity} %</h4>
 				<h4>Wschód słońca: {sunriseTime}</h4>
 				<h4>Zachód słońca: {sunsetTime}</h4>
 				<h4>Aktualna siła wiatru: {wind} m/s</h4>
